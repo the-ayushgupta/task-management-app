@@ -135,6 +135,16 @@ Same body structure as create.
 └── README.md
 ```
 
+## Deployment (Railway)
+
+1. Go to [railway.app](https://railway.app) and sign in with GitHub
+2. **New Project** → **Deploy from GitHub repo** → select `task-management-app`
+3. Add **MySQL**: Click **+ New** → **Database** → **Add MySQL**
+4. Railway auto-injects `MYSQL_URL` - no config needed
+5. Click **Deploy** - the app creates the `tasks` table on startup
+
+Your app will be live at the generated URL (e.g. `https://xxx.up.railway.app`).
+
 ## License
 
 MIT

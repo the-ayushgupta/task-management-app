@@ -1,0 +1,13 @@
+{
+  "name": "task-management-app",
+  "version": "1.0.0",
+  "description": "Task Management Web Application - Global Trend Assignment",
+  "private": true,
+  "scripts": {
+    "start": "cd backend && node server.js",
+    "build": "cd backend && npm install"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
