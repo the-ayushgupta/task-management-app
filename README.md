@@ -135,6 +135,28 @@ Same body structure as create.
 └── README.md
 ```
 
+## Deployment
+
+### Railway (Recommended)
+
+1. Push this repo to GitHub
+2. Go to [railway.app](https://railway.app) and sign in with GitHub
+3. **New Project** → **Deploy from GitHub repo** → select your repo
+4. Add **MySQL** from Railway's templates (or use your existing MySQL URL)
+5. For the web service, set **Root Directory** to `backend` (or leave default - the root package.json handles it)
+6. Add environment variables (if using Railway MySQL, it auto-injects `MYSQL_URL`):
+   - `DB_HOST`, `DB_USER`, `DB_PASSWORD`, `DB_NAME` (or use `MYSQL_URL` from Railway MySQL)
+7. Deploy and use the generated URL
+
+### Render
+
+1. Push to GitHub, then go to [render.com](https://render.com)
+2. **New** → **Web Service** → connect your repo
+3. Set **Build Command**: `cd backend && npm install`
+4. Set **Start Command**: `cd backend && npm start`
+5. Add environment variables for your MySQL connection
+6. Deploy
+
 ## License
 
 MIT
