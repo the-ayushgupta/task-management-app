@@ -2,6 +2,8 @@
 
 A full-stack Task Management application built with Node.js, Express, MySQL, and vanilla HTML/CSS/JavaScript for the Global Trend Full Stack Internship Assignment.
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/the-ayushgupta/task-management-app)
+
 ## Features
 
 - **CRUD Operations**: Create, view, update, and delete tasks
@@ -137,24 +139,24 @@ Same body structure as create.
 
 ## Deployment
 
-### Railway (Recommended)
+### Option 1: Render (One-Click)
 
-1. Push this repo to GitHub
-2. Go to [railway.app](https://railway.app) and sign in with GitHub
-3. **New Project** → **Deploy from GitHub repo** → select your repo
-4. Add **MySQL** from Railway's templates (or use your existing MySQL URL)
-5. For the web service, set **Root Directory** to `backend` (or leave default - the root package.json handles it)
-6. Add environment variables (if using Railway MySQL, it auto-injects `MYSQL_URL`):
-   - `DB_HOST`, `DB_USER`, `DB_PASSWORD`, `DB_NAME` (or use `MYSQL_URL` from Railway MySQL)
-7. Deploy and use the generated URL
+Click the **Deploy to Render** button above, or go to [Render Deploy](https://render.com/deploy?repo=https://github.com/the-ayushgupta/task-management-app).
 
-### Render
+**You'll need a MySQL database.** Free options:
+- [PlanetScale](https://planetscale.com) (free tier)
+- [Railway MySQL](https://railway.app/template/mysql) (create a MySQL service, copy the connection URL)
 
-1. Push to GitHub, then go to [render.com](https://render.com)
-2. **New** → **Web Service** → connect your repo
-3. Set **Build Command**: `cd backend && npm install`
-4. Set **Start Command**: `cd backend && npm start`
-5. Add environment variables for your MySQL connection
+Add these environment variables when prompted:
+- `DB_HOST`, `DB_USER`, `DB_PASSWORD`, `DB_NAME` (or `MYSQL_URL` if using a connection string)
+
+### Option 2: Railway (Recommended for MySQL)
+
+1. Go to [railway.app](https://railway.app) → sign in with GitHub
+2. **New Project** → **Deploy from GitHub** → select `task-management-app`
+3. Click **+ New** → **Database** → **MySQL** (adds MySQL with auto-configured vars)
+4. Select your web service → **Variables** → reference the MySQL variables
+5. Set **Root Directory** to blank (root `package.json` handles build/start)
 6. Deploy
 
 ## License
