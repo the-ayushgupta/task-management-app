@@ -2,8 +2,6 @@
 
 A full-stack Task Management application built with Node.js, Express, MySQL, and vanilla HTML/CSS/JavaScript for the Global Trend Full Stack Internship Assignment.
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/the-ayushgupta/task-management-app)
-
 ## Features
 
 - **CRUD Operations**: Create, view, update, and delete tasks
@@ -136,28 +134,6 @@ Same body structure as create.
 │   └── schema.sql         # Database schema
 └── README.md
 ```
-
-## Deployment
-
-### Option 1: Render (One-Click)
-
-Click the **Deploy to Render** button above, or go to [Render Deploy](https://render.com/deploy?repo=https://github.com/the-ayushgupta/task-management-app).
-
-**You'll need a MySQL database.** Free options:
-- [PlanetScale](https://planetscale.com) (free tier)
-- [Railway MySQL](https://railway.app/template/mysql) (create a MySQL service, copy the connection URL)
-
-Add these environment variables when prompted:
-- `DB_HOST`, `DB_USER`, `DB_PASSWORD`, `DB_NAME` (or `MYSQL_URL` if using a connection string)
-
-### Option 2: Railway (Recommended for MySQL)
-
-1. Go to [railway.app](https://railway.app) → sign in with GitHub
-2. **New Project** → **Deploy from GitHub** → select `task-management-app`
-3. Click **+ New** → **Database** → **MySQL** (adds MySQL with auto-configured vars)
-4. Select your web service → **Variables** → reference the MySQL variables
-5. Set **Root Directory** to blank (root `package.json` handles build/start)
-6. Deploy
 
 ## License
 
